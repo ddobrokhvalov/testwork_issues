@@ -1,0 +1,9 @@
+#AuthType Basic
+#AuthName "Passwd zone"
+#AuthUserFile /var/www/u6724423/public_html/ddobrokhvalov-tver.ru/dev/testwork/htdocs/.htpasswd
+#Require valid-user
+
+RewriteEngine   on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php  [last]
